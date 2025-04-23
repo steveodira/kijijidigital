@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Bridging Borders Through Technology</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Logo and Text Container -->
+        <div class="logo-container">
+            <a href="/">
+                <img src="/static/images/logo.png" alt="Kijiji Digital Logo" class="logo">
+            </a>
+            <div class="project-name">
+                <span class="kijiji-name">kijiji digital</span>
+                <span class="colon">:</span>
+                <span class="tagline">bridging borders through technology</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about" class="active">About Us</a></li>
+                <li><a href="/work">Our Work</a></li>
+                <li><a href="/get_involved">Get Involved</a></li>
+                <li><a href="https://www.paypal.com/donate?hosted_button_id=99WDTTKYHFFPW" class="donate-btn" target="_blank">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Changing Images Section -->
+    <section class="changing-images-container">
+        <div class="image-container">
+            <div class="image-slide">
+                <img src="/static/images/jicho1.png" alt="Image 1" class="slider-img">
+                <div class="text-overlay">
+                    <h2>Empowering African Youth</h2>
+                </div>
+            </div>
+            <div class="image-slide">
+                <img src="/static/images/jicho2.png" alt="Image 2" class="slider-img">
+                <div class="text-overlay">
+                    <h2>Empowering African Youth</h2>
+                </div>
+            </div>
+            <div class="image-slide">
+                <img src="/static/images/jicho3.png" alt="Image 3" class="slider-img">
+                <div class="text-overlay">
+                    <h2>Empowering African Youth</h2>
+                </div>
+            </div>
+            <div class="image-slide">
+                <img src="/static/images/jicho4.png" alt="Image 4" class="slider-img">
+                <div class="text-overlay">
+                    <h2>Empowering African Youth</h2>
+                </div>
+            </div>
+            <div class="image-slide">
+                <img src="/static/images/jicho5.png" alt="Image 5" class="slider-img">
+                <div class="text-overlay">
+                    <h2>Empowering African Youth</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Text Section -->
+    <section class="text-section">
+        <div class="text-container">
+            <p>
+                Imagine walking through the vibrant streets and homesteads of rural Kenya, where the air is thick with untapped potential. You’ll see it in the eyes of the youth, in their dreams as bright as the African sky, yet bound by the harsh reality of opportunity's absence. These kids could be the next Zuckerberg, the creators of technology that could reshape the world, but there's a catch—greatness is nurtured, not stumbled upon. In these communities, countless brilliant minds are left to fade, their potential never fully realized. At Kijiji Digital, we're on a mission to change that. We're here to ignite the spark, to equip the next generation of computer experts with the tools to transform their futures—and ours. Join us in bridging the digital divide and unlocking the untold power of rural Kenya's youth. The next tech revolution could start right here, with us.
+            </p>
+        </div>
+    </section>
+
+    <!-- New Section Below Changing Images -->
+    <section class="inspiration-section">
+        <div class="inspiration-content">
+            <p>
+                Unlocking the Future, One Click at a Time
+            </p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <main>
+        <section id="about-us" class="about-us">
+            <div class="about-us-container">
+                <div class="left-half">
+                    <p class="main-sentence">
+                        <span class="green-text">Empowering the next generation</span> by bridging the digital divide—where every youth has the power of information at their fingertips.
+                    </p>
+                </div>
+                <div class="right-half">
+                    <p class="fun-fact">Over 15 million youths in Kenya have no access to information and technology.</p>
+                    <p class="fun-fact">60% of them are young girls who have lost hope in life and have no inspiration.</p>
+
+                    <!-- Paragraphs -->
+                    <p class="about-paragraph">
+                        Kijiji Digital (Swahili for Digital Village) is a non-profit organization founded by U.S.-sponsored exchange alumni with a mission to bridge the technology gap for disadvantaged youth in rural Kenya. Our goal is to provide these young people with access to the wealth of opportunities available online.
+                    </p>
+                    <p class="about-paragraph">
+                        Approximately 15 million youth in Kenya lack access to technology, limiting their potential and future prospects. Through our programs, we aim to empower these youths by providing them with the tools and knowledge to harness technology in their education and projects. We teach them how to integrate AI into their studies, guide them through college applications, help them create professional resumes, and equip them with the skills needed to succeed in today’s digital world.
+                    </p>
+                    <p class="about-paragraph">
+                        Additionally, many young girls in rural areas face daunting challenges due to limited opportunities and societal constraints. As a result, many drop out of school, experience early pregnancies, and lose hope for their future. Through technology, mentorship programs, and community support, we aspire to inspire these young women, help them discover their talents, and show them that the world is waiting for their unique contributions.
+                    </p>
+                    <p class="about-paragraph">
+                        At Kijiji Digital, we believe that access to technology can be transformative — it’s more than just a tool; it’s a pathway to opportunity, hope, and empowerment.
+                    </p>
+                    <p class="about-paragraph">
+                        Join us today in our mission to create lasting change in the lives of Kenya’s youth and young women. Together, we can inspire a generation and help them build a brighter future.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bridging Borders Through Technology</p>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-slide');
+
+        function changeImage() {
+            images.forEach((image) => {
+                image.style.display = 'none'; // Hide all images
+            });
+
+            currentImageIndex++;
+            if (currentImageIndex > images.length) {
+                currentImageIndex = 1; // Restart from the first image
+            }
+
+            images[currentImageIndex - 1].style.display = 'block'; // Show the current image
+        }
+
+        setInterval(changeImage, 5000); // Change image every 5 seconds
+        changeImage(); // Show the first image immediately
+    </script>
+</body>
+</html>
